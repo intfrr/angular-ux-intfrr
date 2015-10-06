@@ -80,16 +80,16 @@ Then, in the `home.html`, we have a link that navigates the user to the `Details
 ### Theming
 
 When you’re prototyping you want to try different themes (colors, typographies, sizes, etc.) at the same time to see which one works better.
-For that, you can use a the `ux-themeable` feature from `angular-ux`:
+For that, you can use a the `ux-themable` feature from `angular-ux`:
 
 ```html
-<div class=“content” ux-themeable>
+<div class=“content” ux-themable>
   <h1>Title</h1>
   <p>This is some text</p>
 </div>
 ```
 
-First you need to add the `ux-themeable` directive to the parent HTML element that you want to theme. Then, to change themes, you need to specify the theme name as a query parameter in the prototype URL. For example, if you go to `http://localhost:3000/#/?page=Details&uxTheme=option1`, the `div.content` will end up having an additional class named `option1` which means we can style it as follows:
+First you need to add the `ux-themable` directive to the parent HTML element that you want to theme. Then, to change themes, you need to specify the theme name as a query parameter in the prototype URL. For example, if you go to `http://localhost:3000/#/?page=Details&uxTheme=option1`, the `div.content` will end up having an additional class named `option1` which means we can style it as follows:
 
 ```css
 div.content.option1 h1 {
@@ -101,16 +101,16 @@ div.content.option1 p {
 }
 ```
 
-Alternatively, you can set the query parameter to use for this `ux-themeable` as follows:
+Alternatively, you can set the query parameter to use for this `ux-themable` as follows:
 
 ```html
-<div class=“content” ux-themeable="contentTheme">
+<div class=“content” ux-themable="contentTheme">
   <h1>Title</h1>
   <p>This is some text</p>
 </div>
 ```
 
-Then, the URL to add `option1` class to `div.content` would be `http://localhost:3000/#/?page=Details&ucontentTheme=option1`
+Then, the URL to add `option1` class to `div.content` would be `http://localhost:3000/#/?page=Details&contentTheme=option1`
 
 ## Examples
 
